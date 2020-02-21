@@ -145,17 +145,17 @@ public class Neural {
         double output = neural.getOutput();
         System.out.println("Output: "+output);
         double target = 1;
-//        System.out.println("dMSE: " + dMSE(output, target));
-//
-//        while(Math.abs(dMSE(output, target)) > 0.01) {
-//            System.out.println("MSE: " + MSE(output, target));
-//            System.out.println("dMSE: " + dMSE(output, target));
-//            neural.updatePara(dMSE(output, target));
-//            System.out.println("W: " + neural.getW());
-//            System.out.println("b: " + neural.getB());
-//            System.out.println("Output: " + output);
-//            output = neural.getOutput();
-//            //break;
-//        }
+        System.out.println("dMSE: " + dMSE(output, target));
+
+        while(Math.abs(dMSE(output, target)) > 0.01) {
+            System.out.println("MSE: " + MSE(output, target));
+            System.out.println("dMSE: " + dMSE(output, target));
+            neural.updatePara(dMSE(output, target));
+            System.out.println("W: " + neural.getW());
+            System.out.println("b: " + neural.getB());
+            System.out.println("Output: " + output);
+            output = neural.getOutput();
+            //break;
+        }
     }
 }
